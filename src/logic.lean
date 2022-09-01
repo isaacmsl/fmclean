@@ -188,7 +188,11 @@ end
 theorem demorgan_conj_converse :
   (¬Q ∨ ¬P) → ¬(P∧Q)  :=
 begin
-  sorry,
+  intros h h',
+  cases h' with p q,
+  cases h,
+  contradiction,
+  contradiction,
 end
 
 theorem demorgan_conj_law :
