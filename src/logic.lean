@@ -304,7 +304,14 @@ end
 theorem disj_idempot :
   (P∨P) ↔ P  :=
 begin
-  sorry,
+  split,
+  intro h,
+  cases h,
+  exact h,
+  exact h,
+  intro h,
+  left,
+  exact h,
 end
 
 end propositional
