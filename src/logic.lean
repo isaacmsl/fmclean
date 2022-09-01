@@ -291,7 +291,14 @@ end
 theorem conj_idempot :
   (P∧P) ↔ P :=
 begin
-  sorry,
+  split,
+  intro h,
+  cases h with x y,
+  exact x,
+  intro h,
+  split,
+  exact h,
+  exact h,
 end
 
 theorem disj_idempot :
