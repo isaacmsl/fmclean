@@ -155,7 +155,18 @@ end
 theorem demorgan_disj :
   ¬(P∨Q) → (¬P ∧ ¬Q)  :=
 begin
-  sorry,
+  intro h,
+  split,
+  intro p,
+  have poq : P∨Q,
+  left,
+  exact p,
+  exact h poq,
+  intro q,
+  have poq : P∨Q,
+  right,
+  exact q,
+  exact h poq,
 end
 
 theorem demorgan_disj_converse :
