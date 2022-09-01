@@ -35,7 +35,12 @@ end
 theorem disj_comm :
   (P ∨ Q) → (Q ∨ P)  :=
 begin
-  sorry,
+  intro a,
+  cases a,
+  right,
+  apply a,
+  left,
+  apply a,
 end
 
 theorem conj_comm :
