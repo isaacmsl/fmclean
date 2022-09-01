@@ -11,8 +11,7 @@ variables P Q R : Prop
 theorem doubleneg_intro :
   P → ¬¬P  :=
 begin
-  intro a,
-  intro b,
+  intros h h',
   contradiction,
 end
 
@@ -35,12 +34,12 @@ end
 theorem disj_comm :
   (P ∨ Q) → (Q ∨ P)  :=
 begin
-  intro a,
-  cases a,
+  intro h,
+  cases h,
   right,
-  apply a,
+  apply h,
   left,
-  apply a,
+  apply h,
 end
 
 theorem conj_comm :
