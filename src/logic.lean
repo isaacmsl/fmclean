@@ -224,7 +224,12 @@ end
 theorem curry_prop :
   ((P∧Q)→R) → (P→(Q→R))  :=
 begin
-  sorry,
+  intros h p q,
+  have pq : P ∧ Q,
+  split,
+  exact p,
+  exact q,
+  exact h pq,
 end
 
 theorem uncurry_prop :
