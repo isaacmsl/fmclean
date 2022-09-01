@@ -248,7 +248,8 @@ end
 theorem impl_refl :
   P → P  :=
 begin
-  sorry,
+  intro h,
+  exact h,
 end
 
 ------------------------------------------------
