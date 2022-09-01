@@ -45,7 +45,11 @@ end
 theorem conj_comm :
   (P ∧ Q) → (Q ∧ P)  :=
 begin
-  sorry,
+  intro h,
+  cases h with hp hq,
+  split,
+  apply hq,
+  apply hp,
 end
 
 
