@@ -11,7 +11,9 @@ variables P Q R : Prop
 theorem doubleneg_intro :
   P → ¬¬P  :=
 begin
-  sorry,
+  intro a,
+  intro b,
+  contradiction,
 end
 
 theorem doubleneg_elim :
