@@ -172,7 +172,11 @@ end
 theorem demorgan_disj_converse :
   (¬P ∧ ¬Q) → ¬(P∨Q)  :=
 begin
-  sorry,
+  intros h h',
+  cases h with np nq,
+  cases h',
+  contradiction,
+  contradiction,
 end
 
 theorem demorgan_conj :
