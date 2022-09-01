@@ -324,9 +324,9 @@ end
 theorem demorgan_forall_converse :
   (∃x, ¬P x) → ¬(∀x, P x)  :=
 begin
-  intros h h'',
+  intros h h',
   cases h with x npx,
-  have px : P x := h'' x,
+  have px : P x := h' x,
   contradiction,
 end
 
