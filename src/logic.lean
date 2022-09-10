@@ -135,7 +135,12 @@ end
 theorem peirce_law_weak :
   ((P → Q) → P) → ¬¬P  :=
 begin
-  sorry,
+  intros h np,
+  have pq : P → Q,
+  intro p,
+  contradiction,
+  have p : P := h pq,
+  contradiction,
 end
 
 
