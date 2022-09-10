@@ -105,7 +105,9 @@ end
 theorem contrapositive_law :
   (P → Q) ↔ (¬Q → ¬P)  :=
 begin
-  sorry,
+  split,
+  exact impl_as_contrapositive P Q,
+  exact impl_as_contrapositive_converse P Q,
 end
 
 
