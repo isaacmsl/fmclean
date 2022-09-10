@@ -95,7 +95,11 @@ end
 theorem impl_as_contrapositive_converse :
   (¬Q → ¬P) → (P → Q)  :=
 begin
-  sorry,
+  intros h p,
+  by_contradiction hboom,
+  apply h,
+  exact hboom,
+  exact p,
 end
 
 theorem contrapositive_law :
