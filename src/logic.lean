@@ -18,7 +18,9 @@ end
 theorem doubleneg_elim :
   ¬¬P → P  :=
 begin
-  sorry,
+  intro h,
+  by_contradiction h,
+  contradiction,
 end
 
 theorem doubleneg_law :
