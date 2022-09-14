@@ -489,7 +489,9 @@ end
 theorem demorgan_forall_law :
   ¬(∀x, P x) ↔ (∃x, ¬P x)  :=
 begin
-  sorry,
+  split,
+  exact demorgan_forall U P,
+  exact demorgan_forall_converse U P,
 end
 
 theorem demorgan_exists_law :
