@@ -54,7 +54,8 @@
     },
     {
       "lean": "lemma zero_mul (m : mynat) : 0 * m = 0 :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction m with d hd,\r\nrw mul_zero,\r\nrefl,\r\nrw mul_succ,\r\nrw add_zero,\r\nexact hd,"
     },
     {
       "lean": "lemma mul_one (m : mynat) : m * 1 = m :=\n",
@@ -138,7 +139,7 @@
     {
       "lean": "example (P Q R S T U: Type)\n(p : P)\n(h : P → Q)\n(i : Q → R)\n(j : Q → T)\n(k : S → T)\n(l : T → U)\n: U :=\n",
       "isSolved": true,
-      "editorText": "apply l,\r\napply j,\r\napply h,\r\nexact p,\r\n"
+      "editorText": "have q := h(p),\r\nhave t := j(q),\r\nhave u := l(t),\r\nexact u,\r\n"
     },
     {
       "lean": "example (P Q : Type) : P → (Q → P) :=\n",
@@ -183,7 +184,7 @@
     {
       "lean": "lemma maze (P Q R S T U: Prop)\n(p : P)\n(h : P → Q)\n(i : Q → R)\n(j : Q → T)\n(k : S → T)\n(l : T → U)\n: U :=\n",
       "isSolved": true,
-      "editorText": "apply l,\r\napply j,\r\napply h,\r\nexact p,\r\n"
+      "editorText": "have q := h(p),\r\nhave t := j(q),\r\nhave u := l(t),\r\nexact u,\r\n\r\n"
     },
     {
       "lean": "example (P Q : Prop) : P → (Q → P) :=\n",
@@ -233,7 +234,7 @@
     {
       "lean": "lemma iff_trans (P Q R : Prop) : (P ↔ Q) → (Q ↔ R) → (P ↔ R) :=\n",
       "isSolved": true,
-      "editorText": "intros pq qr,\r\nsplit,\r\nintro p,\r\napply qr.1,\r\napply pq.1,\r\nexact p,\r\nintro r,\r\napply pq.2,\r\napply qr.2,\r\nexact r,\r\n"
+      "editorText": "intros peq qer,\r\ncases peq with pq qp,\r\ncases qer with qr rq,\r\nsplit,\r\nintro p,\r\napply qr,\r\napply pq,\r\nexact p,\r\nintro r,\r\napply qp,\r\napply rq,\r\nexact r,\r\n\r\n"
     },
     {
       "lean": "example (P Q : Prop) : Q → (P ∨ Q) :=\n",
