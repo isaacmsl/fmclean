@@ -147,7 +147,8 @@
     },
     {
       "lean": "example (P Q R : Type) : (P → (Q → R)) → ((P → Q) → (P → R)) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intros pqr pq p,\r\n-- easter egg, valid because its enough to have p and q to get r\r\napply pqr,\r\nexact p,\r\nexact pq(p),\r\n"
     },
     {
       "lean": "example (P Q F : Type) : (P → Q) → ((Q → F) → (P → F)) :=\n",
