@@ -122,7 +122,8 @@
     },
     {
       "lean": "example (P Q : Type) (p : P) (h : P → Q) : Q :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "exact h(p),"
     },
     {
       "lean": "example : mynat → mynat :=\n",
