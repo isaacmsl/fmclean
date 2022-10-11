@@ -34,7 +34,8 @@
     },
     {
       "lean": "lemma succ_add (a b : mynat) : succ a + b = succ (a + b) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction b with d hd,\r\nrw add_zero,\r\nrw add_zero,\r\nrefl,\r\nrw add_succ,\r\nrw hd,\r\nrw add_succ,\r\nrefl,\r\n"
     },
     {
       "lean": "lemma add_comm (a b : mynat) : a + b = b + a :=\n",
