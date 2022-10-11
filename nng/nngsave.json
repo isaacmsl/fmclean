@@ -29,7 +29,8 @@
     },
     {
       "lean": "lemma add_assoc (a b c : mynat) : (a + b) + c = a + (b + c) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction c with d hd,\r\nrw add_zero,\r\nrw add_zero,\r\nrefl,\r\nrw add_succ,\r\nrw add_succ,\r\nrw add_succ,\r\nrw hd,\r\nrefl,\r\n"
     },
     {
       "lean": "lemma succ_add (a b : mynat) : succ a + b = succ (a + b) :=\n",
