@@ -59,7 +59,8 @@
     },
     {
       "lean": "lemma mul_one (m : mynat) : m * 1 = m :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "rw one_eq_succ_zero,\r\nrw mul_succ,\r\nrw mul_zero,\r\nrw zero_add,\r\nrefl,"
     },
     {
       "lean": "lemma one_mul (m : mynat) : 1 * m = m :=\n",
