@@ -232,7 +232,8 @@
     },
     {
       "lean": "lemma iff_trans (P Q R : Prop) : (P ↔ Q) → (Q ↔ R) → (P ↔ R) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intros pq qr,\r\nsplit,\r\nintro p,\r\napply qr.1,\r\napply pq.1,\r\nexact p,\r\nintro r,\r\napply pq.2,\r\napply qr.2,\r\nexact r,\r\n"
     },
     {
       "lean": "example (P Q : Prop) : Q → (P ∨ Q) :=\n",
