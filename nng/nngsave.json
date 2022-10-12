@@ -69,7 +69,8 @@
     },
     {
       "lean": "lemma mul_add (t a b : mynat) : t * (a + b) = t * a + t * b :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction b with i hi,\r\nrw add_zero,\r\nrw mul_zero,\r\nrw add_zero,\r\nrefl,\r\nrw add_succ,\r\nrw mul_succ,\r\nrw hi,\r\nrw mul_succ,\r\nrw add_assoc,\r\nrefl,\r\n"
     },
     {
       "lean": "lemma mul_assoc (a b c : mynat) : (a * b) * c = a * (b * c) :=\n",
