@@ -95,7 +95,7 @@
     {
       "lean": "lemma mul_left_comm (a b c : mynat) : a * (b * c) = b * (a * c) :=\n",
       "isSolved": true,
-      "editorText": "induction b with i hi,\r\ninduction c with j hj,\r\nrepeat{ rw zero_mul },\r\nrepeat{ rw mul_zero },\r\nrw succ_mul,\r\nrw mul_add,\r\nrw hi,\r\nrw succ_mul,\r\nrefl,\r\n"
+      "editorText": "induction b with i hi,\r\nrepeat{ rw zero_mul },\r\nrepeat{ rw mul_zero },\r\nrw succ_mul,\r\nrw mul_add,\r\nrw hi,\r\nrw succ_mul,\r\nrefl,\r\n"
     },
     {
       "lean": "lemma zero_pow_zero : (0 : mynat) ^ (0 : mynat) = 1 :=\n",
