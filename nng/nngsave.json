@@ -129,7 +129,8 @@
     },
     {
       "lean": "lemma pow_pow (a m n : mynat) : (a ^ m) ^ n = a ^ (m * n) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction n with i hi,\r\nrw mul_zero,\r\nrepeat { rw pow_zero },\r\nrw mul_succ,\r\nrw pow_add,\r\nrw pow_succ,\r\nrw hi,\r\nrefl,\r\n"
     },
     {
       "lean": "lemma add_squared (a b : mynat) :\n  (a + b) ^ (2 : mynat) = a ^ (2 : mynat) + b ^ (2 : mynat) + 2 * a * b :=\n",
