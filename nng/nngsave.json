@@ -114,7 +114,8 @@
     },
     {
       "lean": "lemma one_pow (m : mynat) : (1 : mynat) ^ m = 1 :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction m with i hi,\r\nrw pow_zero,\r\nrefl,\r\nrw pow_succ,\r\nrw mul_one,\r\nrw hi,\r\nrefl,\r\n"
     },
     {
       "lean": "lemma pow_add (a m n : mynat) : a ^ (m + n) = a ^ m * a ^ n :=\n",
