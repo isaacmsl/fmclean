@@ -99,7 +99,8 @@
     },
     {
       "lean": "lemma zero_pow_zero : (0 : mynat) ^ (0 : mynat) = 1 :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "rw pow_zero,\r\nrefl,\r\n"
     },
     {
       "lean": "lemma zero_pow_succ (m : mynat) : (0 : mynat) ^ (succ m) = 0 :=\n",
