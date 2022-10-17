@@ -324,7 +324,8 @@
     },
     {
       "lean": "lemma add_left_eq_zero {{a b : mynat}} (H : a + b = 0) : b = 0 :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "cases b,\r\nrefl,\r\nrw add_succ at H,\r\nexfalso,\r\napply succ_ne_zero (a + b),\r\nexact H,\r\n"
     },
     {
       "lean": "lemma add_right_eq_zero {a b : mynat} : a + b = 0 → a = 0 :=\n",
