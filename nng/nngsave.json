@@ -339,7 +339,8 @@
     },
     {
       "lean": "lemma ne_succ_self (n : mynat) : n ≠ succ n :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction n with i hi,\r\n  exact zero_ne_succ 0,\r\n\r\n  intro h,\r\n  rw succ_eq_succ_iff i (succ i) at h,\r\n  apply hi,\r\n  exact h,\r\n  "
     },
     {
       "lean": "theorem mul_pos (a b : mynat) : a ≠ 0 → b ≠ 0 → a * b ≠ 0 :=\n",
