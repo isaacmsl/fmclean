@@ -349,7 +349,8 @@
     },
     {
       "lean": "theorem eq_zero_or_eq_zero_of_mul_eq_zero (a b : mynat) (h : a * b = 0) :\n  a = 0 ∨ b = 0 :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "cases b,\r\n  right,\r\n  refl,\r\n\r\n  cases a,\r\n    left,\r\n    refl,\r\n\r\n    right,\r\n    exfalso,\r\n    rw [\r\n      mul_succ,\r\n      add_succ\r\n    ] at h,\r\n    apply zero_ne_succ (succ a * b + a),\r\n    symmetry,\r\n    exact h,\r\n"
     },
     {
       "lean": "theorem mul_eq_zero_iff (a b : mynat): a * b = 0 ↔ a = 0 ∨ b = 0 :=\n",
