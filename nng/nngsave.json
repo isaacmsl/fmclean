@@ -364,7 +364,8 @@
     },
     {
       "lean": "lemma one_add_le_self (x : mynat) : x ≤ 1 + x :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "use 1,\r\nrw add_comm,"
     },
     {
       "lean": "lemma le_refl (x : mynat) : x ≤ x :=\n",
