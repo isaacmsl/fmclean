@@ -442,7 +442,8 @@
     },
     {
       "lean": "lemma lt_iff_succ_le (a b : mynat) : a < b ↔ succ a ≤ b :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "split,\r\n  intro h,\r\n  exact lt_aux_one a b h,\r\n\r\n  intro h,\r\n  exact lt_aux_two a b h,\r\n"
     }
   ]
 }
