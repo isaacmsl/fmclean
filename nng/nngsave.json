@@ -423,7 +423,8 @@
     },
     {
       "lean": "theorem not_succ_le_self (a : mynat) : ¬ (succ a ≤ a) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction a with i hi,\r\n  intro h,\r\n  cases h with b hb,\r\n  rw [\r\n    succ_add,\r\n    zero_add\r\n  ] at hb,\r\n  apply zero_ne_succ b,\r\n  exact hb,\r\n\r\n  intro h,\r\n  have q := le_of_succ_le_succ (succ i) i h,\r\n  apply hi,\r\n  exact q,\r\n"
     },
     {
       "lean": "theorem add_le_add_left {a b : mynat} (h : a ≤ b) (t : mynat) :\n  t + a ≤ t + b :=\n",
