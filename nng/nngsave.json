@@ -437,7 +437,8 @@
     },
     {
       "lean": "lemma lt_aux_two (a b : mynat) : succ a ≤ b → a ≤ b ∧ ¬ (b ≤ a) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intro h,\r\ncases h with c hc,\r\nrw succ_add at hc,\r\nrw hc,\r\nsplit,\r\n  use succ c,\r\n  rw add_succ,\r\n  refl,\r\n\r\n  intro h,\r\n  have q := add_le_add_right h c,\r\n  cases q with d hd,\r\n  apply not_succ_le_self (a + c),\r\n  use c + d,\r\n  rw add_assoc at hd,\r\n  exact hd,\r\n"
     },
     {
       "lean": "lemma lt_iff_succ_le (a b : mynat) : a < b ↔ succ a ≤ b :=\n",
