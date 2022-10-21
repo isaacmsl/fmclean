@@ -404,7 +404,8 @@
     },
     {
       "lean": "theorem le_total (a b : mynat) : a ≤ b ∨ b ≤ a :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "induction b with i hi,\r\n  right,\r\n  use a,\r\n  rw zero_add,\r\n  refl,\r\n\r\n  cases hi,\r\n    left,\r\n    cases hi with b hb,\r\n    rw hb,\r\n    use succ b,\r\n    rw add_succ,\r\n    refl,\r\n\r\n    cases hi with b hb,\r\n    cases b,\r\n      rw add_zero at hb,\r\n      rw hb,\r\n      left,\r\n      use succ 0,\r\n      rw add_succ,\r\n      rw add_zero,\r\n      refl,\r\n\r\n      rw add_succ at hb,\r\n      rw hb,\r\n      right,\r\n      use b,\r\n      rw succ_add,\r\n      refl,\r\n"
     },
     {
       "lean": "lemma le_succ_self (a : mynat) : a ≤ succ a :=\n",
